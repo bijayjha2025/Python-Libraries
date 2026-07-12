@@ -44,3 +44,16 @@ print(array00[0,0,0])
 print(array00[1,2,1])
 print(array00[0,2,1])
 print(array00[1,1,1])
+
+#Let's create a random word from the list of letters in the array00. We can use random indexing to access the elements in the array. (Let's say I want to create LBW), L is in second block, first row and third column, so it will be [1,0,2], B is in first block, first row and second column, so it will be [0,0,1], W is in third block, second row and second column, so it will be [2,1,1]. So the random word will be created using these indexes.
+
+randomWord = array00[1,0,2] + array00[0,0,1] + array00[2,1,1]
+print(randomWord) #This will print the random word 'LBW'.
+
+
+#Another word to practice, let's say DLS
+# D is in first block, second row, first column (0,1,0), L is in second block, first row, third column (1,0,2) and S is in third block first row, first column so (2,0,1)
+
+newWord = array00[0,1,0] + array00[1,0,2] + array00[2,0,0]
+print(newWord)
+
