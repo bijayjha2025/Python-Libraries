@@ -21,3 +21,36 @@ print(np.ceil(array)) #This will return the smallest integer greater than or equ
 print(np.pi) #This will return the value of pi.
 print(np.sin(array)) #This will return the sine of each element of the array.   
 print(np.cos(array)) #This will return the cosine of each element of the array.
+
+
+#Practice Question
+radii = np.array([1, 2, 3, 4, 5])
+print(np.pi * radii ** 2)
+
+
+length = np.array([3.4, 5.6, 7.8])
+print(np.floor(length) * np.ceil(length))
+
+
+#Element wise arithmetic
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+
+print(array1 + array2) #This will add the corresponding elements of the two arrays.
+print(array1 - array2) #This will subtract the corresponding elements of the two arrays.
+print(array1 * array2) #This will multiply the corresponding elements of the two arrays.
+print(array1 / array2) #This will divide the corresponding elements of the two arrays.
+print(array1 ** array2) #This will raise the corresponding elements of the two arrays to the power of each other.
+print(array1 % array2) #This will return the remainder of the corresponding elements of the two arrays when divided by each other.
+
+#Comparison operators
+scores = np.array([85, 90, 78, 92, 88, 100, 34, 46, 56, 64])
+print(scores > 80) #This will return a boolean array indicating which elements of the scores are greater than 80.
+print(scores < 90) #This will return a boolean array indicating which elements of the scores are less than 90.
+print(scores == 88) #This will return a boolean array indicating which elements of the scores are equal to 88.
+print(scores != 78) #This will return a boolean array indicating which elements of the scores are not equal to 78.
+print(scores == 100) #This will return a boolean array indicating which elements of the scores are equal to 100.
+print(scores >= 34) #This will return a boolean array indicating which elements of the scores are greater than or equal to 34.
+
+scores[scores < 70] = 0 #
+print(scores)
