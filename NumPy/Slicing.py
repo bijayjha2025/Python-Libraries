@@ -19,4 +19,3 @@ print(array[1:]) #This will return the rows from index 1 to the end of the array
 print(array[0:4:2]) #This will return the rows from index 0 to index 3 with a step of 2. It will return the rows at indices 0 and 2.
 
 print(array[::2]) #This will return the rows from index 0 to the end of the array with a step of 2. It will return the rows at indices 0 and 2.
-
