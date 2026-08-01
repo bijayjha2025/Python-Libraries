@@ -32,3 +32,31 @@ print(filtered_df_multiple_conditions) #This will print the rows where the 'Age'
 #Using or operator to filter rows where the 'Age' column has values greater than 30 or the 'City' column is 'New York'
 filtered_df_or_condition = df[(df[' Age'] > 30) | (df[' City'] == 'London')]
 print(filtered_df_or_condition) #This will print the rows where the 'Age' column has values greater than 30 or the 'City' column is 'New York'.
+
+#Using not operator to filter rows where the 'Age' column does not have values greater than 30
+filtered_df_not_condition = df[~(df[' Age'] > 30)]
+print(filtered_df_not_condition) #This will print the rows where the 'Age' column does not have values greater than 30.
+
+#Similarly, we have other operators like `isin()` to filter rows based on a list of values, and `between()` to filter rows based on a range of values, using which we can perform more complex filtering operations on our DataFrame.
+
+#Example: Filter rows where the 'City' column is either 'New York' or 'Los Angeles'
+filtered_df_isin = df[df[' City'].isin(['London', 'Los Angeles'])]
+print(filtered_df_isin) #This will print the rows where the 'City' column is either 'New York' or 'Los Angeles'.
+
+#Example: Filter rows where the 'Age' column is between 25 and 35
+filtered_df_between = df[df[' Age'].between(25, 35)]
+print(filtered_df_between) #This will print the rows where the 'Age' column is between 25 and 35.
+
+#Example of other logical operators: We can also use other logical operators like `>`, `<`, `>=`, `<=`, and `!=` to filter rows based on different conditions.
+#Example: Filter rows where the 'Age' column is not equal to 30
+filtered_df_not_equal = df[df[' Age'] != 30]
+print(filtered_df_not_equal) #This will print the rows where the 'Age' column is not equal to 30.
+
+filtered_df_greater_equal = df[df[' Age'] >= 30]
+print(filtered_df_greater_equal) #This will print the rows where the 'Age' column is greater than or equal to 30.
+
+filtered_df_less_equal = df[df[' Age'] <= 30]
+print(filtered_df_less_equal) #This will print the rows where the 'Age' column is less than or equal to 30.
+
+filtered_df_less_than = df[df[' Age'] < 30]
+print(filtered_df_less_than) #This will print the rows where the 'Age' column is less than 30. 
