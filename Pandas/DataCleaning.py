@@ -26,3 +26,22 @@ print(df_replaced) #This will print the DataFrame after replacing all occurrence
 df[' Age'] = df[' Age'].astype(int) #This will change the data type of the 'Age' column from float to int.
 print(df.dtypes) #This will print the data types of the columns in the DataFrame.
 
+
+
+#We can also clean data by removing duplicates using the `drop_duplicates()` method.
+
+#Example: Remove duplicate rows from the DataFrame.
+df_dropped_duplicates = df.drop_duplicates() #This will remove duplicate rows from the DataFrame.
+print(df_dropped_duplicates) #This will print the DataFrame after removing duplicate rows.
+
+df_cleaned = df.dropna().drop_duplicates() #This will remove rows with missing values and duplicate rows from the DataFrame.
+print(df_cleaned) #This will print the DataFrame after removing rows with missing values and duplicate rows.
+
+
+df_cleaned.to_csv(r"C:\Users\pc\Desktop\New\Pandas\Data\cleaned_data.csv", index=False) #This will save the cleaned DataFrame to a new CSV file without the index column.
+
+#Also, we can standardize data formats using the `str` accessor methods in Pandas.
+#Example: Standardize the 'Name' column to title case.
+
+df[' Name'] = df[' Name'].str.title() #This will standardize the 'Name' column to title case.
+print(df) #This will print the DataFrame after standardizing the 'Name' column to title case.
